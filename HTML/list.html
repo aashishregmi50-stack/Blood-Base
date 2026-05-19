@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Donor List</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 30px; background: #f5f5f5; }
+        .container { background: white; padding: 20px; border-radius: 6px; max-width: 900px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h2 { color: #d32f2f; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #d32f2f; color: white; }
+    </style>
+</head>
+<body>
+<div class="container">
+    {% if selected_receipent %}
+        <h2>Donors matching for receipent: {{ selected_receipent.firstname }} {{ selected_receipent.middlename }} {{ selected_receipent.lastname }}</h2>
+        {% if donors %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Middle Name</th>
+                        <th>Last Name</th>
+                        <th>Contact</th>
+                        <th>Gender</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for d in donors %}
+                    <tr>
+                        <td>{{ d.firstname }}</td>
+                        <td>{{ d.middlename }}</td>
+                        <td>{{ d.lastname }}</td>
+                        <td>{{ d.phone }}</td>
+                        <td>{{ d.gender }}</td>
+                        <td>{{ d.email }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No matching donors found for this recipient's blood group and address.</p>
+        {% endif %}
+    {% else %}
+        <p>No receipient selected.</p>
+    {% endif %}
+</div>
+</body>
+</html>

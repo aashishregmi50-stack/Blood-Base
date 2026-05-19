@@ -1,0 +1,45 @@
+week2:Identified key features: User registration, login, donor profile, request blood, admin panel.
+
+Installed Django and set up the project environment.
+
+Initialized SQLite as the default database.
+
+Created Django project and first app
+week3
+Developed basic web layout using HTML, CSS, and Bootstrap
+
+Created registration and login pages for donor, recipient, and admin
+
+Designed responsive navigation bar and dashboard templates
+week 4
+Set up Python with Flask/Django and SQLite3
+Implemented user registration and login logic
+Connected frontend forms to backend routes
+
+week 5
+Wrote matching algorithm (based on blood group & location).
+created database for users, donor and recipient,message feedback.
+
+week 6
+Created admin login and dashboard
+
+Implemented CRUD operations for all entities in the system
+
+Ensured role-based access control
+
+
+week 7
+Conducted unit testing on user, donor, and recipient modules
+
+Performed integration testing of the full system flow
+
+Resolved bugs and improved performance
+
+Took feedback from peers/testers and made necessary changes
+
+weeek 8
+Conducted system testing.
+
+Fixed bugs and optimized code.
+
+Prepared final report and presentation slides.
